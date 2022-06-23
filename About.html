@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Follow us</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+    <header>
+        <img src="unnamed.jpg"> <br> <a href="unnamed.jpg" class="logo"></a>
+        <ul>
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="About.html" class="active">About</a></li>
+            <li><a href="Recipes.html">recipes</a></li>
+        </ul>
+    </header>
+    <section>>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text"> Follow us</h2>
+        <a href="#sec" id="btn">visit us</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About us</h2>
+        <p>Here are some of our social media platform links <br> instagram: <a href="https://www.instagram.com/prasanthi.santhi.75/">Visit our instagram page</a><br> 
+            youtube: <a href="https://www.youtube.com/channel/UC4VPmOE_9B6L7ixpjIM76Wg/videos?view=0">Visit our youtube channel</a> 
+            <br> facebook: <a href="https://www.facebook.com/prasanthi.santhi.75">Visit our facebook page</a><br></p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+        
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY
+            stars.style.left = value * 0.27 +  'px';
+            moon.style.top = value * 1.05 +  'px';
+            mountains_behind.style.top = value * 0.5 +  'px';
+            mountains_front.style.top = value * 0 +  'px';
+            text.style.marginRight = value * 3 +  'px';
+            text.style.marginTop = value * 1.5 +  'px';
+            btn.style.marginTop = value * 1.5 +  'px';
+            header.style.top = value * 0.5 +  'px';
+        })
+    </script>
+</body>
+</html>
